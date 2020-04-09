@@ -77,3 +77,6 @@ while not user == 9:
 
 # #game over, save results
 save_results(wins, ties, losses)
+
+## Rock paper scissors example notes:
+# -
