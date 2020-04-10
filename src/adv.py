@@ -22,7 +22,7 @@ earlier adventurers. The only exit is to the south."""),
 }
 
 
-# Link rooms together
+# Link rooms together:
 
 room['outside'].n_to = room['foyer']
 room['foyer'].s_to = room['outside']
@@ -32,6 +32,14 @@ room['overlook'].s_to = room['foyer']
 room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
+
+from item import Item
+# Creating items & then adding them to rooms:
+coins = Item("coins", "an item that is useful or accumulating wealth")
+sword = Item("sword", "a weapon you can use for defense")
+beer = Item("beer", "a drink you can have to relax")
+
+room['outside']
 
 #
 # Main
@@ -62,4 +70,4 @@ while True:
     # Read
     cmd = input("--> ")
     # Eval
-    player.move(cmd)
+    player.command(cmd)
