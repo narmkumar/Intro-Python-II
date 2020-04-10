@@ -35,11 +35,16 @@ room['treasure'].s_to = room['narrow']
 
 from item import Item
 # Creating items & then adding them to rooms:
-coins = Item("coins", "an item that is useful or accumulating wealth")
-sword = Item("sword", "a weapon you can use for defense")
-beer = Item("beer", "a drink you can have to relax")
+items = {
+    "coins" : Item("coins", "Coins - items that are useful for accumulating wealth"),
+    "sword" : Item("sword", " a Sword - a weapon you can use for defense"),
+    "beer" : Item("beer", "a Beer - a drink you can have to relax"),
+}
 
-room['outside']
+
+room["outside"].add_item(items["coins"])
+room["foyer"].add_item(items["sword"])
+room["overlook"].add_item(items["beer"])
 
 #
 # Main

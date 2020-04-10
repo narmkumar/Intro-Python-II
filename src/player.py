@@ -50,7 +50,7 @@ class Player:
                 print(f"-- {item}")
         else:
             print("**Please input n,s,e,w to move a direction or q to quit"
-                  "\n**To perform an action, type take or drop followed by item name"
+                  "\n**To perform an action, type 'pickup' or 'drop' followed by item name"
                   "\n**To view your items, type i")
 
     def pickup_item(self, item):
